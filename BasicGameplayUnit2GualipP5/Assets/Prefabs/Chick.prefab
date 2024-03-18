@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 6167319524496862263}
   - component: {fileID: 2612101834360990680}
   - component: {fileID: 6693089741702577750}
+  - component: {fileID: 3181480721583544967}
   m_Layer: 0
   m_Name: Chick
   m_TagString: Untagged
@@ -145,6 +146,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b3f72152210244687631a4caf7fd98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &3181480721583544967
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903040547718261632}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.2135243, y: 6.1017985, z: 7.7931595}
+  m_Center: {x: 0.003109773, y: 2.9905782, z: 0.16606012}
 --- !u!1 &5772768853960328629
 GameObject:
   m_ObjectHideFlags: 0

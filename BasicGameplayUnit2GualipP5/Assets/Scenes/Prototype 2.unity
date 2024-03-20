@@ -864,7 +864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 782835627071808878, guid: f68555c9b28c6e44ca2f04413aab9169, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18
+      value: 25.44
       objectReference: {fileID: 0}
     - target: {fileID: 782835627071808878, guid: f68555c9b28c6e44ca2f04413aab9169, type: 3}
       propertyPath: m_LocalRotation.w
@@ -917,7 +917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1853873515671816668, guid: a0450c850a0fa254e8bd6f0b35de7ffe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1853873515671816668, guid: a0450c850a0fa254e8bd6f0b35de7ffe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -951,6 +951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cow
       objectReference: {fileID: 0}
+    - target: {fileID: 4836201837696717291, guid: a0450c850a0fa254e8bd6f0b35de7ffe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -99.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -978,7 +982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4144299209891890841, guid: 19e65597a48cab541bbffe1dbe3d04b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4144299209891890841, guid: 19e65597a48cab541bbffe1dbe3d04b9, type: 3}
       propertyPath: m_LocalRotation.w

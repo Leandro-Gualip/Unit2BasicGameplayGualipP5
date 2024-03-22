@@ -217,6 +217,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50.000004, y: -60.000004, z: 0}
+--- !u!1 &256473802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 256473803}
+  m_Layer: 0
+  m_Name: FoodSpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &256473803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256473802}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1051704611}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &350221335
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +281,9 @@ MonoBehaviour:
   - {fileID: 1903040547718261632, guid: 19e65597a48cab541bbffe1dbe3d04b9, type: 3}
   - {fileID: 4253048477801924883, guid: a0450c850a0fa254e8bd6f0b35de7ffe, type: 3}
   - {fileID: 224542350862243905, guid: f68555c9b28c6e44ca2f04413aab9169, type: 3}
+  sideSpawnMinZ: 5
+  sideSpawnMaxZ: 20
+  sideSpawnX: 20
 --- !u!4 &350221337
 Transform:
   m_ObjectHideFlags: 0
@@ -611,11 +645,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400046, guid: 814f4326a50812947b2469896d89a215, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 256473803}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100046, guid: 814f4326a50812947b2469896d89a215, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1051704609}
+    - targetCorrespondingSourceObject: {fileID: 100046, guid: 814f4326a50812947b2469896d89a215, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1051704612}
   m_SourcePrefab: {fileID: 100100000, guid: 814f4326a50812947b2469896d89a215, type: 3}
 --- !u!1 &1051704606 stripped
 GameObject:
@@ -635,9 +675,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
+  verticalInput: 0
   speed: 20
   xRange: 15
+  zRange: 5
+  projectileSpawnPoint: {fileID: 256473803}
   projectilePrefab: {fileID: 2152294420053684057, guid: 25d3b49fc4bd6244c93a4215d2bf47be, type: 3}
+--- !u!4 &1051704611 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400046, guid: 814f4326a50812947b2469896d89a215, type: 3}
+  m_PrefabInstance: {fileID: 995755932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1051704612
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051704606}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.8762378, y: 2.995925, z: 0.7051344}
+  m_Center: {x: -0.00009414554, y: 1.4939532, z: 0.007532656}
 --- !u!850595691 &1118604914
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1024,9 +1093,9 @@ SceneRoots:
   - {fileID: 534669905}
   - {fileID: 170076735}
   - {fileID: 992285706}
-  - {fileID: 995755932}
   - {fileID: 98238094582966653}
   - {fileID: 6827191397560881277}
   - {fileID: 325206521015141619}
   - {fileID: 6825923808044934750}
   - {fileID: 350221337}
+  - {fileID: 995755932}

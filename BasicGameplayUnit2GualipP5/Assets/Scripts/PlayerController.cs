@@ -5,8 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
+    public float verticalInput;
     public float speed = 20.0f;
     public float xRange = 15;
+    public float zRange = 5;
+
+    public Transform projectileSpawnPoint;
 
     public GameObject projectilePrefab;
 
@@ -29,11 +33,21 @@ public class PlayerController : MonoBehaviour
         }
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        if (transform.position.z < -zRange)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -zRange);
+        }
+        if(transform.position.z > zRange)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zRange);
+        }
+        verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Launch a projectile from the player
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
         }
     }
 }
